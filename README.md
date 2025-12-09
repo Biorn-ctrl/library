@@ -3,6 +3,38 @@ Het gebruikt **SQLite** als database en een CLI-interface om boeken en genres te
 
 ---
 
+## bestandstructuur:
+
+```
+Library/
+│── app/
+│ ├── cli.py
+│ ├── main.py
+│ ├── repository.py
+│ ├── init.py
+│ │
+│ ├── db/
+│ │ ├── database.py
+│ │ └── schema.sql
+│ │
+│ └── models/
+│ ├── book.py
+│ └── genre.py
+│
+│── data/
+│ └── library.db ← Databasebestand (wordt automatisch aangemaakt)
+│
+│── config.json ← Instellingenbestand
+│── config_example.json ← Voorbeeld van configuratie
+│── requirements.txt
+│── README.md
+│── .gitignore
+│── .venv/ ← Virtuele omgeving (wordt genegeerd door Git)
+```
+
+
+---
+
 ## Functionaliteiten
 
 - Boeken toevoegen
@@ -41,4 +73,4 @@ python -m app.main
 
 Exporteren naar CSV komt het CSV bestand in de hoofd library map terecht.
 
-Voorbeelddatabase wordt meegestuurd, lege database wordt aangemaakt indien database nog niet bestaat. Deze moet in de app\db folder geplaatst worden.
+Voorbeelddatabase wordt meegestuurd, lege database wordt aangemaakt indien database nog niet bestaat. Deze moet in de hoofd library folder geplaatst worden.
